@@ -1,0 +1,67 @@
+{
+	"parser": "@babel/eslint-parser",
+	"env": {
+		"node": true,
+		"es6": true,
+		"es2021": true,
+		"jest": true
+	},
+	"plugins": ["prettier"],
+	"extends": ["plugin:import/recommended", "eslint:recommended"],
+	"parserOptions": {
+		"ecmaVersion": 12,
+		"sourceType": "module",
+		"requireConfigFile": false
+	},
+	"rules": {
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+		"no-unused-vars": [
+			"error",
+			{
+				"vars": "all",
+				"args": "after-used",
+				"ignoreRestSiblings": true,
+				"argsIgnorePattern": "err"
+			}
+		],
+		"quotes": [
+			"error",
+			"double",
+			{
+				"avoidEscape": true,
+				"allowTemplateLiterals": true
+			}
+		],
+		"no-undef": 2,
+		"no-console": 0,
+		"comma-style": [2, "last"],
+		"import/no-cycle": [2, { "maxDepth": "∞" }],
+		"import/no-unresolved": [
+			2,
+			{
+				"ignore": ["chalk", "got", "#lib/sdk", "#lib/clients", "#lib/log", "#tasks/*"]
+			}
+		],
+		"import/order": [
+			"error",
+			{
+				"groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
+				"newlines-between": "never",
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		],
+		"import/no-mutable-exports": "error",
+		"import/no-namespace": "error",
+		"import/newline-after-import": ["error", { "count": 1 }],
+		"import/no-default-export": "error",
+		"prettier/prettier": [
+			"error",
+			{
+				"comma-dangle": "always"
+			}
+		]
+	}
+}

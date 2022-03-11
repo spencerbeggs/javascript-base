@@ -1,0 +1,16 @@
+{
+  "plugins": ["@babel/plugin-syntax-top-level-await"],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env", {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

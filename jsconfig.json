@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"target": "es2021",
+		"allowSyntheticDefaultImports": false,
+		"baseUrl": ".",
+		"jsx": "preserve",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"typeRoots": ["./types", "./node_modules/@types"],
+		"paths": {
+			"#sdk/*": ["./lib/*"],
+			"#tasks/*": ["./tasks/*"]
+		}
+	},
+	"exclude": ["node_modules", ".pkg", ".cache", ".ssl", ".idea", ".wordpress", "vendor"]
+}
