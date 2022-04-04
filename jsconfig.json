@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"target": "es2021",
+		"allowSyntheticDefaultImports": false,
+		"baseUrl": ".",
+		"jsx": "preserve",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"typeRoots": ["./types", "./node_modules/@types"],
+		"paths": {
+			"#module": ["./src/index"]
+		}
+	},
+	"exclude": ["node_modules"],
+	"moduleNameMapper": {
+		"#module": "./src/index.js"
+	}
+}
