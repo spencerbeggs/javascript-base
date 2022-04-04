@@ -8,9 +8,11 @@
 		"resolveJsonModule": true,
 		"typeRoots": ["./types", "./node_modules/@types"],
 		"paths": {
-			"#sdk/*": ["./lib/*"],
-			"#tasks/*": ["./tasks/*"]
+			"#module": ["./src/index"]
 		}
 	},
-	"exclude": ["node_modules", ".pkg", ".cache", ".ssl", ".idea", ".wordpress", "vendor"]
+	"exclude": ["node_modules"],
+	"moduleNameMapper": {
+		"#module": "./src/index.js"
+	}
 }

@@ -1,4 +1,6 @@
 export const sleep = (delay) => new Promise((res) => setTimeout(res, delay, undefined));
 
-await sleep(1000);
-console.log("Hello, world!");
+export const hello = async () => {
+	await sleep(50);
+	console.log("Hello, world!");
+};
